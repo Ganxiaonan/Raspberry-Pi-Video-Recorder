@@ -480,7 +480,7 @@ class VideoPlayer(ttk.Frame):
 
 if __name__ == "__main__":
     root_dir = os.path.join(os.getcwd(),"videos")
-    log_dir = os.path.join(root_dir,"logs")   #folder to delete log file
+    log_dir = os.path.join(os.getcwd(),"logs")   #folder to delete log file
     limit_day = 14
     if not os.path.exists(root_dir):
         os.makedirs(root_dir)
