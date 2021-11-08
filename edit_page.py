@@ -120,8 +120,10 @@ class EditPage(Frame):
         try:
             if os.path.isdir(self.target_delete_item_path):
                 shutil.rmtree(self.target_delete_item_path)
+                
             elif os.path.isfile(self.target_delete_item_path):
                 os.remove(self.target_delete_item_path)
+                
         except:
             pass
         self.files = os.listdir(self.currently_working)
