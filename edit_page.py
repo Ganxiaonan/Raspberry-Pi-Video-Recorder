@@ -47,7 +47,7 @@ class EditPage(Frame):
         self.vbar.pack(side=RIGHT,fill=Y)
 
         for row,file in enumerate(self.files):
-            self.listbox = Listbox(self.frame,yscrollcommand = self.vbar.set,height=20,width=100,selectmode='extended')
+            self.listbox = Listbox(self.frame,yscrollcommand = self.vbar.set,height=15,width=70,selectmode='extended')
             for file in self.files:
                 self.listbox.insert('end', os.path.basename(file))
         self.listbox.pack(side=LEFT,fill=BOTH)
