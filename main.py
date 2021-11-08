@@ -234,11 +234,17 @@ class VideoPlayer(ttk.Frame):
                 self.window.destroy()
                 
                 self.editpage.show_editpage()
+                
+            else:
+                self.window.destroy()
+                # if cancel is pressed, destroy window; if retry is pressed, clear entry
+                messagebox.askretrycancel(title="Prompt",message="Wrong Password!!") 
+                                        
 
         elif value == "ENTER" and self.__keyboard_mode == "admin_password_load_movie":
             self.admin_password_entry = self.entry.get()
+            self.window.destroy()
             if self.admin_password == self.admin_password_entry:
-                self.window.destroy()
                 
                 movie_filename = filedialog.askopenfilename(initialdir=self.__initialdir_movie,
                                                             title="Select the movie to play",
@@ -253,11 +259,8 @@ class VideoPlayer(ttk.Frame):
 
             else:
                 # if cancel is pressed, destroy window; if retry is pressed, clear entry
-                if  messagebox.askretrycancel(title="Prompt",message="Wrong Password!!") == False:
-                    self.window.destroy()
-
-                else:
-                    self.entry.delete(0, 'end')
+                messagebox.askretrycancel(title="Prompt",message="Wrong Password!!")
+                    
         else :
             self.entry.insert(END,value)
 
@@ -496,3 +499,4 @@ if __name__ == "__main__":
     VideoPlayer(root,image=True, play=True, camera=True).pack(side="top",fill="both",expand=True)
     edit_page.EditPage(root)
     root.mainloop()
+
