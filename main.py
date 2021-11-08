@@ -479,10 +479,11 @@ class VideoPlayer(ttk.Frame):
 
 
 if __name__ == "__main__":
-    root_dir = r"C:\Users\ASUSuser\PiRecorder\videos"  #folder to delete
-    log_dir = r"C:\Users\ASUSuser\PiRecorder\logs"   #folder to delete log file
+    root_dir = os.path.join(os.getcwd(),"videos")
+    log_dir = os.path.join(root_dir,"logs")   #folder to delete log file
     limit_day = 14
-
+    if not os.path.exists(root_dir):
+        os.makedirs(root_dir)
     if not os.path.exists(log_dir):
         os.makedirs(log_dir)
     #Current date

@@ -145,7 +145,7 @@ def search_filesNFolders(root_dir,log_dir,limit_day=14):
                 f.write("       Note: This file has been deleted!"+"\n"+"\n")
                 print('Deleted')
             else:
-                print('Not older than 1 day!')
+                print(f'Not older than {limit_day} day!')
             print(file)
 
         f.write("\n"+"\n")
