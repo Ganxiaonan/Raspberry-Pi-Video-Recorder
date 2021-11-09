@@ -25,9 +25,15 @@ In terminal
 3. Add “@lxterminal” at the bottom of autostart, press Ctl+x then y to save and exit to terminal
 4. sudo nano ~/.bashrc
 5. Append these line at the bottom of the .bashrc file<br />
+     #for virtual environment#<br />
      export WORKON_HOME=$HOME/.virtualenvs<br />
      export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3<br />
      source /usr/local/bin/virtualenvwrapper.sh<br />
+     <br />
+     #command to run every time terminal is lauched#<br />
+     workon cv<br />
+     cd /home/pi/Raspberry-Pi-Video-Recorder/<br />
+     python main.py<br />
 6. Ctl+x then y to save and exit to terminal
 7. source ~/.bashrc
 8. sudo reboot now
