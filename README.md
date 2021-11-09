@@ -38,4 +38,4 @@ In terminal
 7. source ~/.bashrc
 8. sudo reboot now
 
-
+The pirecorder should be autoboot at startup now
