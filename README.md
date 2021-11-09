@@ -24,10 +24,10 @@ In terminal
 2. sudo nano autostart
 3. Add “@lxterminal” at the bottom of autostart, press Ctl+x then y to save and exit to terminal
 4. sudo nano ~/.bashrc
-5. Append these line at the bottom of the .bashrc file
-     export WORKON_HOME=$HOME/.virtualenvs
-     export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-     source /usr/local/bin/virtualenvwrapper.sh
+5. Append these line at the bottom of the .bashrc file<br />
+     export WORKON_HOME=$HOME/.virtualenvs<br />
+     export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3<br />
+     source /usr/local/bin/virtualenvwrapper.sh<br />
 6. Ctl+x then y to save and exit to terminal
 7. source ~/.bashrc
 8. sudo reboot now
